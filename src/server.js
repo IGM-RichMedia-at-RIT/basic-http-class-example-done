@@ -61,8 +61,10 @@ const onRequest = (request, response) => {
   response.end();
 };
 
-// start up our HTTP server, set the request callback and start the port
-http.createServer(onRequest).listen(port);
-
+// start up our HTTP server, set the request callback and start the port.
+// The second parameter to the .listen function is a callback that gets
+// called when the server has started.
+http.createServer(onRequest).listen(port, () => {
 // Message just so we can see that the server started successfully and is ready.
-console.log(`Listening on 127.0.0.1: ${port}`);
+  console.log(`Listening on 127.0.0.1: ${port}`);
+});
