@@ -38,7 +38,7 @@ const onRequest = (request, response) => {
     for the favicon
   * */
   console.log(request.url);
-
+  
   /**
     This is where you would do server logic for determining which
     page to load or file to send
